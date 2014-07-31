@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://localhost:8080/Indeed/BestBuyService?wsdl" uri="src/conf/xml-resources/web-service-references/BestBuyService/wsdl/localhost_8080/Indeed/BestBuyService.wsdl"/>
+    <system systemId="http://localhost:8080/Indeed/BestBuyService?xsd=1" uri="src/conf/xml-resources/web-service-references/BestBuyService/wsdl/localhost_8080/Indeed/BestBuyService.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/Indeed/IndeedService?wsdl" uri="src/conf/xml-resources/web-service-references/IndeedService/wsdl/localhost_8080/Indeed/IndeedService.wsdl"/>
+    <system systemId="http://localhost:8080/Indeed/IndeedService?xsd=1" uri="src/conf/xml-resources/web-service-references/IndeedService/wsdl/localhost_8080/Indeed/IndeedService.xsd_1.xsd"/>
+</catalog>
