@@ -56,56 +56,54 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <div id=\"tabContainer\">\n");
       out.write("            <div class=\"tabs\">\n");
       out.write("                <ul>\n");
-      out.write("                    <li id=\"tabHeader_1\">Home</li>\n");
-      out.write("                    <li id=\"tabHeader_2\">Periodic Table</li>\n");
+      out.write("                    <li id=\"tabHeader_1\">Periodic Table</li>\n");
       out.write("                </ul>\n");
       out.write("            </div>\n");
       out.write("\n");
       out.write("            <div class=\"tabscontent\">\n");
       out.write("                <div class=\"tabpage\" id=\"tabpage_1\">\n");
       out.write("                    It is an application of Periodic Table Web Service\n");
-      out.write("                </div>\n");
-      out.write("                <div class=\"tabpage\" id=\"tabpage_2\">\n");
-      out.write("        <form action=\"index.jsp\" method=\"post\">\n");
-      out.write("            <table>\n");
-      out.write("                <tr><td><input type=\"submit\" name=\"atoms\" value=\"Get All Atoms\"></td><td></td></tr>\n");
-      out.write("                <tr><td>Element: </td><td><input type=\"text\" name=\"ele\"></td></tr>\n");
-      out.write("                <tr><td><input type=\"submit\" name=\"number\" value=\"Get Atomic Number\"></td>\n");
-      out.write("                    <td><input type=\"submit\" name=\"weight\" value=\"Get Atomic Weight\"></td><td></td></tr>\n");
-      out.write("            </table>\n");
-      out.write("        </form>        \n");
-      out.write("    ");
       out.write("\n");
-      out.write("    ");
+      out.write("                    <form action=\"index.jsp\" method=\"post\">\n");
+      out.write("                        <table>\n");
+      out.write("                            <tr><td><input type=\"submit\" name=\"atoms\" value=\"Get All Atoms\"></td><td></td></tr>\n");
+      out.write("                            <tr><td>Element: </td><td><input type=\"text\" name=\"ele\"></td></tr>\n");
+      out.write("                            <tr><td><input type=\"submit\" name=\"number\" value=\"Get Atomic Number\"></td>\n");
+      out.write("                                <td><input type=\"submit\" name=\"weight\" value=\"Get Atomic Weight\"></td><td></td></tr>\n");
+      out.write("                        </table>\n");
+      out.write("                    </form>        \n");
+      out.write("                    ");
+      out.write("\n");
+      out.write("                    ");
 
-        String element = request.getParameter("ele");
-        String atoms = request.getParameter("atoms");
-        String number = request.getParameter("number");
-        String weight = request.getParameter("weight");
-    try {
-	service.Periodictable service = new service.Periodictable();
-	service.PeriodictableSoap port = service.getPeriodictableSoap();
-	 // TODO initialize WS operation arguments here
-	String elementName = element;
-	String result = "";
-        if(atoms != null && !"".equals(atoms))
-            result = port.getAtoms();
-        else if(number != null && !"".equals(number)){
-            result = port.getAtomicNumber(elementName);
-            result = result.split(elementName)[0];
-        }
-        else if(weight != null && !"".equals(weight))
-            result = port.getAtomicWeight(elementName);
-	
-	out.println(result);
-    } catch (Exception ex) {
-	// TODO handle custom exceptions here
-    }
-    
+                        String element = request.getParameter("ele");
+                        String atoms = request.getParameter("atoms");
+                        String number = request.getParameter("number");
+                        String weight = request.getParameter("weight");
+                        try {
+                            service.Periodictable service = new service.Periodictable();
+                            service.PeriodictableSoap port = service.getPeriodictableSoap();
+                            // TODO initialize WS operation arguments here
+                            String elementName = element;
+                            String result = "";
+                            if (atoms != null && !"".equals(atoms)) {
+                                result = port.getAtoms();
+                            } else if (number != null && !"".equals(number)) {
+                                result = port.getAtomicNumber(elementName);
+                                result = result.split(elementName)[0];
+                            } else if (weight != null && !"".equals(weight)) {
+                                result = port.getAtomicWeight(elementName);
+                            }
+
+                            out.println(result);
+                        } catch (Exception ex) {
+                            // TODO handle custom exceptions here
+                        }
+                    
       out.write("\n");
-      out.write("    ");
+      out.write("                    ");
       out.write("\n");
-      out.write("     </div>\n");
+      out.write("                </div>\n");
       out.write("            </div>\n");
       out.write("        </div>\n");
       out.write("    </body>\n");

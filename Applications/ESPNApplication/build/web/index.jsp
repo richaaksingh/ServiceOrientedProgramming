@@ -22,16 +22,16 @@ and open the template in the editor.
         <div id="tabContainer">
             <div class="tabs">
                 <ul>
-                    <li id="tabHeader_1">Home</li>
-                    <li id="tabHeader_2">ESPN</li>
+                    <li id="tabHeader_1">ESPN</li>
                 </ul>
             </div>
 
             <div class="tabscontent">
                 <div class="tabpage" id="tabpage_1">
-                    It is an application of ESPN Web Service
-                </div>
-                <div class="tabpage" id="tabpage_2">
+                    It is an application of ESPN Web Service.
+                    <p>You can find latest information and News about any sports on ESPN channel. Enter sports name in the space below.</p>
+                    <p>Example: Sport Name = Soccer</p>
+                    <br><br>
                     <form action="index.jsp" method="post">
                         <table>
                             <tr><td>Sport Name: </td><td><input type="text" name="sport"></td></tr>

@@ -102,6 +102,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
                                 String[] results = searchResult.split("~");
                     
       out.write("\r\n");
+      out.write("                    <br>\r\n");
       out.write("                    <table class=\"sleek\">\r\n");
       out.write("                        <tr class=\"sleek\">\r\n");
       out.write("                            <th class=\"sleek\">SKU</th>\r\n");

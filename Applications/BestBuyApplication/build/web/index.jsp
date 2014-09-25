@@ -22,15 +22,16 @@ and open the template in the editor.
         <div id="tabContainer">
             <div class="tabs">
                 <ul>
-                    <li id="tabHeader_1">Home</li>
-                    <li id="tabHeader_2">Best Buy</li>
+                    <li >Best Buy</li>
                 </ul>
             </div>
             <div class="tabscontent">
                 <div class="tabpage" id="tabpage_1">
-                    It is an application of Best Buy Web Service
-                </div>
-                <div class="tabpage" id="tabpage_2">
+                    It is an application of Best Buy Web Service.
+                    <p>You can search any product available on Best Buy website by providing information about 
+                    either the product or manufacturer and price range.</p>
+                    <p>Example: product = laptop, manufacturer = Lenovo, Min Price = 400, Max Price = 1000</p>
+                    <br><br>
                     <form action="index.jsp" method="post">
                         <table>
                             <tr><td>Product: </td><td><input type="text" name="product"></td></tr>
@@ -40,19 +41,18 @@ and open the template in the editor.
                             <tr><td><input type="submit" name="search" value="Search"></td><td></td></tr>
                         </table>
                     </form>
-
+                    
                     <%-- start web service invocation --%>
                     <%
                         String product = request.getParameter("product");
                         String manu = request.getParameter("manu");
                         String minPrice = request.getParameter("minPrice");
                         String maxPrice = request.getParameter("maxPrice");
+                       
                         try {
                             application.BestBuyService_Service service = new application.BestBuyService_Service();
                             application.BestBuyService port = service.getBestBuyServicePort();
-
                             String searchResult = port.searchProduct(product, manu, minPrice, maxPrice);
-
                             if (searchResult != null && !searchResult.equals("")) {
                                 String[] results = searchResult.split("~");
                     %>

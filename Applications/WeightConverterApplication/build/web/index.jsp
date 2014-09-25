@@ -16,21 +16,23 @@ and open the template in the editor.
         <div id="tabContainer">
             <div class="tabs">
                 <ul>
-                    <li id="tabHeader_1">Home</li>
-                    <li id="tabHeader_2">Weight Converter</li>
+                    <li id="tabHeader_1">Weight Converter</li>
                 </ul>
             </div>
 
             <div class="tabscontent">
                 <div class="tabpage" id="tabpage_1">
-                    It is an application of Weight Converter Web Service
-                </div>
-                <div class="tabpage" id="tabpage_2">
+                    It is an application of Weight Converter Web Service.
+                    <p>It converts weight from Kilograms to Pound or Pound to Kilograms.</p>
+                    <p>Enter any weight and convert it to Pound or Kilograms.</p>
+                    <p>Example: Weight = 150 and click on "PoundToKg"</p>
+                    <br><br>
                     <form action="index.jsp" method="post">
-                        Enter Weight: <input type="text" name="wt">
+                        Weight: <input type="text" name="wt">
                         <input type="submit" name="PoundToKg" value="PoundToKg">
                         <input type="submit" name="KgToPound" value="KgToPound">
                     </form>
+                    <br>
                     <%-- start web service invocation --%>
                     <%
                         String PoundToKg = request.getParameter("PoundToKg");
