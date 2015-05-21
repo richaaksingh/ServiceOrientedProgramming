@@ -15,7 +15,6 @@ import javax.jws.WebParam;
 /**
  *
  * @author Binit
- * @author Devesh
  */
 @WebService(serviceName = "EmailValidate")
 public class EmailValidate {
