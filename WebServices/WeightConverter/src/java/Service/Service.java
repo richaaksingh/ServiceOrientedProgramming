@@ -13,7 +13,6 @@ import javax.jws.WebParam;
 /**
  *
  * @author Binit
- * @author Devesh
  */
 @WebService(serviceName = "Service")
 public class Service {
