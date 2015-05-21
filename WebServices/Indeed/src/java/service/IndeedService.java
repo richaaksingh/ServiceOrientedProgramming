@@ -20,7 +20,6 @@ import org.xml.sax.SAXException;
 /**
  *
  * @author Binit
- * @author Devesh
  */
 @WebService(serviceName = "IndeedService")
 public class IndeedService {
