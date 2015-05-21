@@ -21,7 +21,6 @@ import org.xml.sax.SAXException;
 /**
  *
  * @author Binit
- * @author Devesh
  */
 @WebService(serviceName = "BestBuyService")
 public class BestBuyService {
